@@ -1,8 +1,6 @@
 ---
 layout: layouts/home.njk
 title: Wild Globalization
-mobile_title: Wild Global-
-mobile_sub_title: ization
 description: A pan-historical exploration of the six wild forces driving hyper-globalizing civilization.
 permalink: /
 bodyClass: site-home
@@ -11,6 +9,7 @@ feed: false
 hero:
   eyebrow: "New Book - Coming Soon"
   title: "Wild <span>Globalization</span>"
+  titleMobile: "Wild <span>Global-<br>ization</span>"
   dek: "A pan-historical exploration of the six wild forces - Ecology, Culture, Technology, Economy, and Governance - that drive and produce our hyper-globalizing civilization. It's wild."
   image: "/assets/img/hero-lcp.webp"
   imageAlt: "Global network visualization"

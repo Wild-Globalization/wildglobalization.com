@@ -424,6 +424,12 @@ button:focus-visible {
 	max-width: 8ch;
 	margin-block: 1.3rem 1rem;
 	font-size: clamp(4.2rem, 12vw, 8.8rem);
+	/* The 8ch box sets where "Wild" wraps; it must not also let the global
+	   h1 break-word rule chop "Globalization" mid-word. The word overflows
+	   the box intact instead, and the mobile variant supplies the break. */
+	word-wrap: normal;
+	overflow-wrap: normal;
+	hyphens: manual;
 }
 
 .hero h1 span,
@@ -1738,23 +1744,30 @@ h1 {
   filter: brightness(1.1);
   transform: translateY(-1px);
 }
+/* Wrappers only switch variants -- the accent styling from `.hero h1 span`
+   belongs to the inner span, so opt them out of it. */
+.hero h1 .hero-title-desktop,
+.hero h1 .hero-title-mobile {
+	color: inherit;
+	font-style: normal;
+}
+
 .hero-title-desktop {
-    display: inline;
+	display: inline;
 }
 
 .hero-title-mobile {
-    display: none;
+	display: none;
 }
 
+/* Below this width "Globalization" no longer fits the viewport, so the hero
+   title switches to the manually hyphenated "Global-/ization" wording. */
 @media (max-width: 640px) {
-    .hero-title-desktop {
-        display: none;
-    }
-    
-    .hero-title-mobile {
-        display: inline;
-        word-break: break-word;
-        hyphens: auto;
-        -webkit-hyphens: auto;
-    }
+	.hero-title-desktop {
+		display: none;
+	}
+
+	.hero-title-mobile {
+		display: inline;
+	}
 }

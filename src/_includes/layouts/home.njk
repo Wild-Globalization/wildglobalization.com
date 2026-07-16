@@ -7,14 +7,12 @@
     <div class="section-inner hero__content">
         <p class="eyebrow"><span></span> {{ hero.eyebrow }}</p>
         
-        <h1>
-            {% if mobile_title and mobile_sub_title %}
-                <span class="hero-title-desktop">{{ title }}</span>
-                <span class="hero-title-mobile">
-                    {{ mobile_title }}<wbr>{{ mobile_sub_title }}
-                </span>
+        <h1{% if hero.titleMobile %} aria-label="{{ title }}"{% endif %}>
+            {% if hero.titleMobile %}
+                <span class="hero-title-desktop" aria-hidden="true">{{ hero.title | safe }}</span>
+                <span class="hero-title-mobile" aria-hidden="true">{{ hero.titleMobile | safe }}</span>
             {% else %}
-                {{ title }}
+                {{ hero.title | safe }}
             {% endif %}
         </h1>
         
