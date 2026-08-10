@@ -84,7 +84,7 @@ export default {
 	title: 'Wild Globalization',
 	tagline: 'A pan-historical exploration of the six wild forces driving hyper-globalizing civilization.',
 	description:
-		'A pan-historical exploration of ecology, culture, technology, economy, and governance as wild forces shaping civilization.',
+		'A pan-historical exploration of ecology, culture, technology, economy, wealth, and governance as wild forces shaping civilization.',
 	url: siteUrl,
 	noindex: false,
 	favicon: '/assets/img/favicon-180.png',

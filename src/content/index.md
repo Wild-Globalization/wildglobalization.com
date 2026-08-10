@@ -10,7 +10,7 @@ hero:
   eyebrow: "New Book - Coming Soon"
   title: "Wild <span>Globalization</span>"
   titleMobile: "Wild <span>Global-<br>ization</span>"
-  dek: "A pan-historical exploration of the six wild forces - Ecology, Culture, Technology, Economy, and Governance - that drive and produce our hyper-globalizing civilization. It's wild."
+  dek: "A pan-historical exploration of the six wild forces - Ecology, Culture, Technology, Economy, Wealth, and Governance - that drive and produce our hyper-globalizing civilization. It's wild."
   image: "/assets/img/hero-lcp.webp"
   imageAlt: "Global network visualization"
   ctaPrimary:
