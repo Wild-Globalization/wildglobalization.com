@@ -1,0 +1,8 @@
+Source-Organization: The Whitestone Foundation
+Contact-Name: Adam DJ Brett
+Contact-Email: adam@adamdjbrett.com
+External-Description: Source for wildglobalization.com, Wild Globalization: a pan-historical exploration of the six wild forces (ecology, culture, technology, economy, governance and the sacred) that drive hyper-globalizing civilization. A Whitestone Foundation project with Gary Bedford.
+External-Identifier: https://github.com/Wild-Globalization/wildglobalization.com
+External-Identifier: https://wildglobalization.com/
+Bag-Group-Identifier: Wild Globalization
+Bag-Count: 1 of 1

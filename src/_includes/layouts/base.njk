@@ -1,5 +1,5 @@
 <!doctype html>
-<html lang="{{ settings.defaultLanguage or 'en' }}">
+<html lang="{{ settings.defaultLanguage or 'en' }}" prefix="zotero: http://www.zotero.org/namespaces/export#">
 	<head>
 	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
 	{% set isArticlePage = (ldType == 'Article') or (pagetype == 'article') or (tags and ('blog' in tags) and not eleventyExcludeFromCollections) %}
@@ -30,11 +30,13 @@
 	<meta name="twitter:image" content="{{ (socialImage | url) | absoluteUrl(settings.url) }}">
 	<meta name="twitter:site" content="@wildglobalization">
 
-	<meta name="citation_title" content="{{ title or settings.title }}">
+	<meta property="zotero:itemType" content="{% if isArticlePage %}blogPost{% else %}webPage{% endif %}">
+	<meta name="prism.publicationName" content="{{ settings.title }}">
 	<meta name="citation_author" content="Bedford, Gary">
-	<meta name="citation_publication_date" content="{{ publishedDate | dateYear }}">
+	<meta name="citation_publication_date" content="{{ publishedDate | dateToRfc3339 }}">
 	<meta name="citation_online_date" content="{{ publishedDate | dateToRfc3339 }}">
 	<meta name="citation_public_url" content="{{ page.url | fullUrl }}">
+	<meta name="citation_language" content="{{ settings.defaultLanguage or 'en' }}">
 	<meta name="DC.title" content="{{ title or settings.title }}">
 	<meta name="DC.creator" content="Gary Bedford">
 	<meta name="DC.publisher" content="{{ settings.organization.name }}">
